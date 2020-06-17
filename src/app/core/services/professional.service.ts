@@ -15,7 +15,7 @@ export class ProfessionalService {
   ) { }
 
   getProfessionals(): Observable<Professional[]> {
-    return this.http.get<Professional[]>(`${environment.endPoint}/professionals?_embed=slots`)
+    return this.http.get<Professional[]>(`${environment.endPoint}/professionals?_embed=review`)
       .pipe(
         retry(1),
         catchError(this.handleError));

@@ -1,25 +1,30 @@
 <div class="row align-content-center">
   <div class="col-md-12" *ngFor="let professional of professionals">
-    <div class="card p-4 mb-4">
+    <div class="card p-4 m-4">
       <div class="card-body">
         <div class="row">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6">
-
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-5">
+            <div class="row align-items-center">
+              <div class="col-md-6 text-center mb-2">
+                <img src="../../../../../assets/img/avatar.webp" class="img-avatar img-fluid">
               </div>
-              <div class="col-md-6">
+              <div class="col-6 m-auto mb-2">
                 <div class="row">
                   <div class="col-md-12">
                     <h3>{{professional?.name}}</h3>
                   </div>
                   <div class="col-md-12">
-                    <span>{{professional?.category}} | </span>
-                    <span>{{professional?.country}}</span>
+                    <span class="professional-category font-weight-bold">{{professional?.category}} </span>
+                    <span>| {{professional?.country}}</span>
                   </div>
                   <div class="col-md-12">
-                    <span>{{professional?.value | currency: 'BRL'}} / </span>
-                    <span>{{professional?.time}} MINUTES</span>
+                    <ng-container *ngFor="let star of profissionalRating(professional.rating)">
+                      <span class="place-info-box-sta star"><i class="fa fa-star"></i></span>
+                    </ng-container> ({{professional?.review?.length}} reviews)
+                  </div>
+                  <div class="col-md-12">
+                    <span class="professional-value font-weight-bold">{{professional?.value | currency: 'BRL'}} </span>
+                    <span class="professional-time font-weight-bold">/ {{professional?.time}} MINUTOS</span>
                   </div>
                 </div>
               </div>
@@ -30,7 +35,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
             <app-professional-calendar [profissionalId]="professional.id"></app-professional-calendar>
           </div>
         </div>

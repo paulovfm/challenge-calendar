@@ -1,0 +1,35 @@
+@import "../../../../../styles.scss";
+
+.card {
+  -webkit-box-shadow: 0 9px 23px rgba(0, 0, 0, 0.13),
+    0 5px 5px rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 9px 23px rgba(0, 0, 0, 0.13), 0 5px 5px rgba(0, 0, 0, 0.06) !important;
+  -webkit-transition: box-shadow 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  -o-transition: box-shadow 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  -webkit-transition: -webkit-box-shadow 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition: -webkit-box-shadow 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition: box-shadow 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition: box-shadow 0.7s cubic-bezier(0.25, 0.8, 0.25, 1),
+    -webkit-box-shadow 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  border-radius: 0.4167rem;
+}
+
+.professional-value {
+  font-size: 1.3rem;
+}
+
+.professional-time {
+  font-size: 0.9rem;
+}
+
+.professional-category {
+  color: $blue;
+}
+
+.img-avatar {
+  max-width: 200px;
+}
+
+.star {
+  color: $yellow;
+}

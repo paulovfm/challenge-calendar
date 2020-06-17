@@ -15,13 +15,16 @@ export class ProfessionalListComponent implements OnInit {
     private professionalService: ProfessionalService
   ) {
     this.professionals = new Array<Professional>();
-   }
+  }
 
   ngOnInit(): void {
     this.professionalService.getProfessionals().subscribe(response => {
       this.professionals = response as Professional[];
-      console.log(response);
     });
+  }
+
+  profissionalRating(rating: number) {
+    return Array(rating).fill(0).map((x, i) => i);
   }
 
 }

@@ -16,14 +16,16 @@ export class ProfessionalCalendarComponent implements OnInit {
 
   dates: Date[];
   slotDates: SlotDate[];
-  timeZone: Date;
+  timeZone: string;
+  loading: boolean;
 
   constructor(
     private slotService: SlotService
   ) {
     this.dates = new Array<Date>();
     this.slotDates = new Array<SlotDate>();
-    this.timeZone = new Date();
+    this.timeZone = `${Intl.DateTimeFormat().resolvedOptions().timeZone}`;
+    this.loading = false;
   }
 
   ngOnInit(): void {
@@ -45,6 +47,7 @@ export class ProfessionalCalendarComponent implements OnInit {
   }
 
   generateSlots(dates: Date[]) {
+    this.loading = true;
     this.slotDates = new Array<SlotDate>();
 
     this.slotService.getSlots(this.profissionalId).subscribe(response => {
@@ -65,7 +68,7 @@ export class ProfessionalCalendarComponent implements OnInit {
 
         this.slotDates.push(slotDate);
       });
-
+      this.loading = false;
     });
 
   }
@@ -89,6 +92,13 @@ export class ProfessionalCalendarComponent implements OnInit {
     this.dates = this.generateDates(this.numberDays,
       (new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() - (this.numberDays))));
     this.generateSlots(this.dates);
+  }
+
+  checkAvailableSlot(slotDates: SlotDate[]) {
+    let response = false;
+    const slotDate = slotDates.find(x => x.slot.length > 0);
+    response = slotDate ? true : false;
+    return response;
   }
 
 }

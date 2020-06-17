@@ -1,15 +1,17 @@
+@import "../../../../../styles.scss";
+
 .calendar {
   .header-calendar {
-    background-color: #007bdb;
+    background-color: $blue;
     padding: 10px;
 
     .title {
-      color: #ffffff;
+      color: $white;
       font-size: 1.3rem;
     }
 
     .sub-title {
-      color: #ffffff;
+      color: $white;
     }
   }
 
@@ -25,10 +27,16 @@
   }
 
   .content-calendar {
+    max-height: 300px;
+    overflow-x: auto;
     margin: 10px 0;
-    padding: 10px 5px;
+    padding: 20px 5px;
     -webkit-box-shadow: 0 9px 23px rgba(0, 0, 0, 0.13), 0 5px 5px rgba(0, 0, 0, 0.06);
     box-shadow: 0 9px 23px rgba(0, 0, 0, 0.13), 0 5px 5px rgba(0, 0, 0, 0.06);
+
+    app-loading {
+      width: 100%;
+    }
   }
 
   .btn-slot {
