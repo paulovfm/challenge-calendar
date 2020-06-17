@@ -1,7 +1,7 @@
 <div class="calendar">
   <div class="header-calendar text-center">
     <div class="title">Schedule your session!</div>
-    <div class="sub-title">Timezone: Lisbon (+1)</div>
+    <div class="sub-title">{{timeZone | date: 'O'}}</div>
   </div>
   <div class="dates-calendar d-flex flex-wrap align-items-center">
     <div class="flex-fill text-center" [style.width.%]="(100 / (dates.length + 2))">
@@ -10,7 +10,7 @@
     </div>
     <div class="flex-fill text-center" *ngFor="let date of dates" [style.width.%]="(100 / (dates.length + 2))">
       <div class="weekday">{{date | date: 'E'}}</div>
-      <div class="text-uppercase">{{date | date: 'LLL dd'}}</div>
+      <div class="text-uppercase">{{date | date: 'dd LLL'}}</div>
     </div>
     <div class="flex-fill text-center" [style.width.%]="(100 / (dates.length + 2))">
       <button class="btn btn-sm btn-secondary btn-circle" (click)="next()"><i class="fa fa-chevron-right"></i></button>
@@ -21,7 +21,7 @@
     <div class="flex-fill text-center" *ngFor="let slotDate of slotDates" [style.width.%]="(100 / (dates.length + 2))">
       <div class="p-1" *ngFor="let slot of slotDate.slot">
         <button
-          class="btn btn-sm btn-secondary btn-block btn-slot font-weight-bold">{{slot.time | date: 'H:mm'}}</button>
+          class="btn btn-sm btn-outline-secondary btn-block btn-slot font-weight-bold">{{slot.time | date: 'H:mm'}}</button>
       </div>
     </div>
     <div class="flex-fill text-center" [style.width.%]="(100 / (dates.length + 2))"></div>

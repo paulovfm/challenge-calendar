@@ -16,12 +16,14 @@ export class ProfessionalCalendarComponent implements OnInit {
 
   dates: Date[];
   slotDates: SlotDate[];
+  timeZone: Date;
 
   constructor(
     private slotService: SlotService
   ) {
     this.dates = new Array<Date>();
     this.slotDates = new Array<SlotDate>();
+    this.timeZone = new Date();
   }
 
   ngOnInit(): void {
@@ -53,9 +55,10 @@ export class ProfessionalCalendarComponent implements OnInit {
         slotDate.slot = new Array<Slot>();
 
         response.forEach(slot => {
-          if ((moment(date).format('DD/MM/YYYY') === moment(slot.time).format('DD/MM/YYYY')
-            && this.profissionalId === slot.professionalId
-            && !slot.reserved)) {
+          if (moment().isBefore(slot.time)
+            && (moment(date).format('DD/MM/YYYY') === moment(slot.time).format('DD/MM/YYYY')
+              && this.profissionalId === slot.professionalId
+              && !slot.reserved)) {
             slotDate.slot.push(slot);
           }
         });
