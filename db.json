@@ -1,0 +1,62 @@
+{
+  "professionals": [
+    {
+      "id": 1,
+      "name": "Paulo Victor",
+      "category": "PSICOLOGIST",
+      "country": "Brasil",
+      "value": 100,
+      "time": 30,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    },
+    {
+      "id": 2,
+      "name": "Thatiany Dias",
+      "category": "PSICOLOGIST",
+      "country": "Portugal",
+      "value": 150,
+      "time": 50,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    }
+  ],
+  "slots": [
+    {
+      "id": 1,
+      "time": "Tue Jun 17 2020 18:00:00 GMT-0300",
+      "reserved": false,
+      "professionalId": 1
+    },
+    {
+      "id": 2,
+      "time": "Tue Jun 17 2020 18:30:00 GMT-0300",
+      "reserved": false,
+      "professionalId": 1
+    },
+    {
+      "id": 3,
+      "time": "Tue Jun 17 2020 19:00:00 GMT-0300",
+      "reserved": false,
+      "professionalId": 1
+    },
+    {
+      "id": 4,
+      "time": "Tue Jun 17 2020 08:00:00 GMT-0300",
+      "reserved": false,
+      "professionalId": 2
+    },
+    {
+      "id": 5,
+      "time": "Tue Jun 18 2020 08:00:00 GMT-0300",
+      "reserved": false,
+      "professionalId": 2
+    },
+    {
+      "id": 6,
+      "time": "Tue Jun 18 2020 08:30:00 GMT-0300",
+      "reserved": false,
+      "professionalId": 2
+    }
+  ]
+}

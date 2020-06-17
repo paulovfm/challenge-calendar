@@ -1,0 +1,52 @@
+.calendar {
+  .header-calendar {
+    background-color: #007bdb;
+    padding: 10px;
+
+    .title {
+      color: #ffffff;
+      font-size: 1.3rem;
+    }
+
+    .sub-title {
+      color: #ffffff;
+    }
+  }
+
+  .dates-calendar {
+    padding: 10px 5px;
+    -webkit-box-shadow: 0 9px 23px rgba(0, 0, 0, 0.13),
+      0 5px 5px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 9px 23px rgba(0, 0, 0, 0.13), 0 5px 5px rgba(0, 0, 0, 0.06);
+
+    .weekday {
+      font-size: 0.9rem;
+    }
+  }
+
+  .content-calendar {
+    margin: 10px 0;
+    padding: 10px 5px;
+    -webkit-box-shadow: 0 9px 23px rgba(0, 0, 0, 0.13),
+      0 5px 5px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 9px 23px rgba(0, 0, 0, 0.13), 0 5px 5px rgba(0, 0, 0, 0.06);
+  }
+
+  .btn-slot {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    background-color: #e3e3e3;
+    color: #545b62;
+  }
+
+  .btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 0;
+  }
+}

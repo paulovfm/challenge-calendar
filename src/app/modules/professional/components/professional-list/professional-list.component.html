@@ -1,0 +1,39 @@
+<div class="row align-content-center">
+  <div class="col-md-12" *ngFor="let professional of professionals">
+    <div class="card p-4 mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>{{professional?.name}}</h3>
+                  </div>
+                  <div class="col-md-12">
+                    <span>{{professional?.category}} | </span>
+                    <span>{{professional?.country}}</span>
+                  </div>
+                  <div class="col-md-12">
+                    <span>{{professional?.value | currency: 'BRL'}} / </span>
+                    <span>{{professional?.time}} MINUTES</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-12">
+                  <div class="text-justify">{{professional?.description}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <app-professional-calendar [profissionalId]="professional.id"></app-professional-calendar>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
