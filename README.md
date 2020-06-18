@@ -1,27 +1,51 @@
-# ChallengeCalendar
+# Challenge Calendar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+## Descrição
 
-## Development server
+Projeto feito em angular 9 em que existe um calendário que disponibiliza horários em que os profissionais estão disponíveis para atendimento, utilizando:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+boostrap: para grid
+moment: formatar datas
+json-server: consumir api com dados
+font-awesome: ícones
 
-## Code scaffolding
+## Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [NodeJS](https://nodejs.org/en/download/)
+
+Após o download do NodeJS é necessário instalar o Angular CLI, a qual esse projeto foi construído.
+
+```
+npm install -g @angular/cli
+```
+
+## Instalação
+
+Instale as dependências indo até o diretório raiz do projeto e executando o comando:
+
+```
+npm install
+```
+
+Após os passos anteriores estarem concluídos, podemos utilizar a nossa aplicação.
+No diretório raiz do projeto digite os comandos:
+
+Inicia o json-server e cria um banco de dados json local.
+
+```
+json-server --watch db.json
+```
+
+Inicia a aplicação.
+
+```
+ng serve -o
+```
+
+O Serviço estará disponível na porta 4200.
+
+http://localhost:4200
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Execute `ng build` para criar o projeto. Os artefatos de construção serão armazenados no diretório `dist/`. Use o sinalizador `--prod` para uma construção de produção.
