@@ -5,8 +5,11 @@
 Projeto feito em angular 9 em que existe um calendário que disponibiliza horários em que os profissionais estão disponíveis para atendimento, utilizando:
 
 boostrap: para grid
+
 moment: formatar datas
+
 json-server: consumir api com dados
+
 font-awesome: ícones
 
 ## Pré-requisitos
